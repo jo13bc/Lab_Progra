@@ -5,7 +5,9 @@
  */
 package Control;
 
-import Modelo.ModeloUsuario;
+
+import Modelo.ModeloLogin;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -15,24 +17,23 @@ import java.awt.event.MouseListener;
 import javax.swing.JButton;
 import Vista.VistaLogueo;
 import AccesoADatos.ServicioLogin;
-import Modelo.ModeloLogin;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
 
 public class ControlLogueo implements MouseListener, ActionListener, KeyListener, WindowListener{
 
-    private AbstractController controlador;;
+    private AbstractController controlador;
     private ServicioLogin servicioLogin;
-    private ModeloLogin modelo;
     private VistaLogueo vista;
+    private ModeloLogin modelo;
     
     public ControlLogueo(ModeloLogin modelo, VistaLogueo vista){
         this.vista = vista;
         this.modelo = modelo;
         vista.setModelo(modelo);
         vista.setControlador(this);
-        //servicioLogin = ServicioLogin.getServicioLogueo();
+        servicioLogin = ServicioLogin.getServicioLogin();
     }
     
     @Override
@@ -55,18 +56,18 @@ public class ControlLogueo implements MouseListener, ActionListener, KeyListener
     public void mouseExited(MouseEvent e) {
      }
     
-    @Override
-    public void actionPerformed(ActionEvent ae) {
-        try {
-            if (ae.getSource().getClass() == JButton.class) {
-                JButton button = (JButton) ae.getSource();
-                //instrucciones(button.getName());
-            }
-        } catch (Exception ex) {
-            vista.mostrarMensaje(ex.getMessage());
-        }
-
-    }
+//    @Override
+//    public void actionPerformed(ActionEvent ae) {
+//        try {
+//            if (ae.getSource().getClass() == JButton.class) {
+//                JButton button = (JButton) ae.getSource();
+//                instrucciones(button.getName());
+//            }
+//        } catch (Exception ex) {
+//            vista.mostrarMensaje(ex.getMessage());
+//        }
+//
+//    }
     
 //    public void instrucciones(String x) throws Exception {
 //        try {
@@ -86,7 +87,46 @@ public class ControlLogueo implements MouseListener, ActionListener, KeyListener
 //                    vista.mostrarMensaje("¡Bienvenido " + funcionario.getNombre() + '!');
 //                }
 //                break;
-//               
+//                case "administrador": {
+//                    VistaAdministrador aux = new VistaAdministrador();
+//                    aux.addWindowListener(this);
+//                    controlador = new ControllerAdministrador(new ModeloAdministrador(funcionario), aux);
+//                    this.vista.setVisible(false);
+//                    controlador.mostrarVista();
+//                }
+//                break;
+//                case "secretaria": {
+//                    VistaSecretaria aux = new VistaSecretaria();
+//                    aux.addWindowListener(this);
+//                    controlador = new ControllerSecretaria(new ModeloSecretaria(funcionario), aux);
+//                    this.vista.setVisible(false);
+//                    controlador.mostrarVista();
+//                }
+//                break;
+//                case "jefe": {
+//                    VistaJefe aux = new VistaJefe();
+//                    aux.addWindowListener(this);
+//                    controlador = new ControllerJefe(new ModeloJefe(funcionario), aux);
+//                    this.vista.setVisible(false);
+//                    controlador.mostrarVista();
+//                }
+//                break;
+//                case "registrador": {
+//                    VistaRegistrador aux = new VistaRegistrador();
+//                    aux.addWindowListener(this);
+//                    controlador = new ControllerRegistrador(new ModeloRegistrador(funcionario), aux);
+//                    this.vista.setVisible(false);
+//                    controlador.mostrarVista();
+//                }
+//                break;
+//                case "recursos humanos": {
+//                    VistaRecursosHumanos aux = new VistaRecursosHumanos();
+//                    aux.addWindowListener(this);
+//                    controlador = new ControllerRecurHumanos(new ModeloRecurHumanos(funcionario), aux);
+//                    this.vista.setVisible(false);
+//                    controlador.mostrarVista();
+//                }
+//                break;
 //                case "salir": {
 //                    System.exit(0);
 //                }
@@ -145,5 +185,10 @@ public class ControlLogueo implements MouseListener, ActionListener, KeyListener
     @Override
     public void windowDeactivated(WindowEvent we) {
         
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

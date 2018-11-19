@@ -104,6 +104,10 @@ public class ServicioUsuario extends Servicio {
         }
 
     }
+    
+    public static ServicioUsuario getServicioUsuario() {
+        return servicioUsuario;
+    }
 
     
 }
