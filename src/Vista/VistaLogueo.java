@@ -165,41 +165,11 @@ public class VistaLogueo extends javax.swing.JFrame implements Observer{
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Ingresar;
-    public javax.swing.JTextField ftfId;
-    public javax.swing.JTextField ftfId1;
-    public javax.swing.JTextField ftfId2;
-    public javax.swing.JTextField ftfId3;
-    public javax.swing.JTextField ftfId4;
-    public javax.swing.JTextField ftfId5;
     public javax.swing.JTextField ftfId6;
-    private javax.swing.JLabel id;
-    private javax.swing.JLabel id1;
-    private javax.swing.JLabel id2;
-    private javax.swing.JLabel id3;
-    private javax.swing.JLabel id4;
-    private javax.swing.JLabel id5;
     private javax.swing.JLabel id6;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    public javax.swing.JPasswordField jtfPassword;
-    public javax.swing.JPasswordField jtfPassword1;
-    public javax.swing.JPasswordField jtfPassword2;
-    public javax.swing.JPasswordField jtfPassword3;
-    public javax.swing.JPasswordField jtfPassword4;
-    public javax.swing.JPasswordField jtfPassword5;
     public javax.swing.JPasswordField jtfPassword6;
-    private javax.swing.JLabel password;
-    private javax.swing.JLabel password1;
-    private javax.swing.JLabel password2;
-    private javax.swing.JLabel password3;
-    private javax.swing.JLabel password4;
-    private javax.swing.JLabel password5;
     private javax.swing.JLabel password6;
     private javax.swing.JButton salir;
     // End of variables declaration//GEN-END:variables

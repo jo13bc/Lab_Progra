@@ -57,21 +57,21 @@ public class VistaVuelos extends javax.swing.JFrame {
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alemania (Berlín)", "Brazil (Sao Paulo)", "China (Pekín)", "Costa Rica (Alajuela)", "EEUU (Texas)" }));
         getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(112, 56, 147, 22);
+        jComboBox1.setBounds(112, 56, 125, 20);
 
         btnBuscar.setText("Buscar");
         getContentPane().add(btnBuscar);
-        btnBuscar.setBounds(24, 365, 71, 25);
+        btnBuscar.setBounds(24, 365, 65, 23);
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alemania (Berlín)", "Brazil (Sao Paulo)", "China (Pekín)", "Costa Rica (Alajuela)", "EEUU (Texas)" }));
         getContentPane().add(jComboBox2);
-        jComboBox2.setBounds(112, 100, 147, 22);
+        jComboBox2.setBounds(112, 100, 125, 20);
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "6:00 - 13:00", "6:00 - 10:00", "8:00 - 16:00", "12:00 - 18:00", "12:00 - 22:00", "18:00 - 3:00", "18:00 - 5:00" }));
         getContentPane().add(jComboBox3);
-        jComboBox3.setBounds(112, 235, 146, 22);
+        jComboBox3.setBounds(112, 235, 146, 20);
         getContentPane().add(jTextField4);
-        jTextField4.setBounds(131, 302, 90, 22);
+        jTextField4.setBounds(131, 302, 90, 20);
 
         jLabel2.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel2.setText("Número Vuelo");
@@ -100,9 +100,9 @@ public class VistaVuelos extends javax.swing.JFrame {
 
         btnRefrescar.setText("Refrescar");
         getContentPane().add(btnRefrescar);
-        btnRefrescar.setBounds(109, 365, 87, 25);
+        btnRefrescar.setBounds(109, 365, 79, 23);
         getContentPane().add(jTextField5);
-        jTextField5.setBounds(637, 22, 130, 22);
+        jTextField5.setBounds(637, 22, 130, 20);
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/edificios.jpg"))); // NOI18N
         getContentPane().add(jLabel7);

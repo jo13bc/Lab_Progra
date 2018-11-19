@@ -103,221 +103,221 @@ public class VistaAsientos extends javax.swing.JFrame {
 
         btn1a.setText("1A");
         getContentPane().add(btn1a);
-        btn1a.setBounds(24, 127, 47, 30);
+        btn1a.setBounds(24, 127, 45, 30);
 
         jButton2.setText("2A");
         getContentPane().add(jButton2);
-        jButton2.setBounds(24, 163, 47, 30);
+        jButton2.setBounds(24, 163, 45, 30);
 
         jButton3.setText("3A");
         getContentPane().add(jButton3);
-        jButton3.setBounds(24, 199, 47, 30);
+        jButton3.setBounds(24, 199, 45, 30);
 
         jButton4.setText("5A");
         getContentPane().add(jButton4);
-        jButton4.setBounds(24, 271, 47, 30);
+        jButton4.setBounds(24, 271, 45, 30);
 
         jButton5.setText("4A");
         getContentPane().add(jButton5);
-        jButton5.setBounds(24, 235, 47, 30);
+        jButton5.setBounds(24, 235, 45, 30);
 
         jButton6.setText("6A");
         getContentPane().add(jButton6);
-        jButton6.setBounds(24, 307, 47, 30);
+        jButton6.setBounds(24, 307, 45, 30);
 
         jButton7.setText("7A");
         getContentPane().add(jButton7);
-        jButton7.setBounds(24, 343, 47, 30);
+        jButton7.setBounds(24, 343, 45, 30);
 
         jButton8.setText("8A");
         getContentPane().add(jButton8);
-        jButton8.setBounds(24, 379, 47, 30);
+        jButton8.setBounds(24, 379, 45, 30);
 
         jButton9.setText("9A");
         getContentPane().add(jButton9);
-        jButton9.setBounds(24, 415, 47, 30);
+        jButton9.setBounds(24, 415, 45, 30);
 
         jButton10.setText("2B");
         getContentPane().add(jButton10);
-        jButton10.setBounds(72, 163, 47, 30);
+        jButton10.setBounds(72, 163, 45, 30);
 
         btn1b.setText("1B");
         getContentPane().add(btn1b);
-        btn1b.setBounds(72, 127, 47, 30);
+        btn1b.setBounds(72, 127, 45, 30);
 
         jButton12.setText("3B");
         getContentPane().add(jButton12);
-        jButton12.setBounds(72, 199, 47, 30);
+        jButton12.setBounds(72, 199, 45, 30);
 
         jButton13.setText("4B");
         getContentPane().add(jButton13);
-        jButton13.setBounds(72, 235, 47, 30);
+        jButton13.setBounds(72, 235, 45, 30);
 
         jButton14.setText("5B");
         getContentPane().add(jButton14);
-        jButton14.setBounds(72, 271, 47, 30);
+        jButton14.setBounds(72, 271, 45, 30);
 
         jButton15.setText("6B");
         getContentPane().add(jButton15);
-        jButton15.setBounds(72, 307, 47, 30);
+        jButton15.setBounds(72, 307, 45, 30);
 
         jButton16.setText("7B");
         getContentPane().add(jButton16);
-        jButton16.setBounds(72, 343, 47, 30);
+        jButton16.setBounds(72, 343, 45, 30);
 
         jButton17.setText("8B");
         getContentPane().add(jButton17);
-        jButton17.setBounds(72, 379, 47, 30);
+        jButton17.setBounds(72, 379, 45, 30);
 
         jButton18.setText("9B");
         getContentPane().add(jButton18);
-        jButton18.setBounds(72, 415, 47, 30);
+        jButton18.setBounds(72, 415, 45, 30);
 
         jButton19.setText("4C");
         getContentPane().add(jButton19);
-        jButton19.setBounds(121, 235, 47, 30);
+        jButton19.setBounds(121, 235, 45, 30);
 
         jButton20.setText("5C");
         getContentPane().add(jButton20);
-        jButton20.setBounds(121, 271, 47, 30);
+        jButton20.setBounds(121, 271, 45, 30);
 
         jButton21.setText("6C");
         getContentPane().add(jButton21);
-        jButton21.setBounds(121, 307, 47, 30);
+        jButton21.setBounds(121, 307, 45, 30);
 
         jButton22.setText("7C");
         getContentPane().add(jButton22);
-        jButton22.setBounds(121, 343, 47, 30);
+        jButton22.setBounds(121, 343, 45, 30);
 
         jButton23.setText("8C");
         getContentPane().add(jButton23);
-        jButton23.setBounds(121, 379, 47, 30);
+        jButton23.setBounds(121, 379, 45, 30);
 
         jButton24.setText("9C");
         getContentPane().add(jButton24);
-        jButton24.setBounds(121, 415, 47, 30);
+        jButton24.setBounds(121, 415, 45, 30);
 
         jButton25.setText("2C");
         getContentPane().add(jButton25);
-        jButton25.setBounds(121, 163, 47, 30);
+        jButton25.setBounds(121, 163, 45, 30);
 
         btn1c.setText("1C");
         getContentPane().add(btn1c);
-        btn1c.setBounds(121, 127, 47, 30);
+        btn1c.setBounds(121, 127, 45, 30);
 
         jButton27.setText("3C");
         getContentPane().add(jButton27);
-        jButton27.setBounds(121, 199, 47, 30);
+        jButton27.setBounds(121, 199, 45, 30);
 
         jButton28.setText("2D");
         getContentPane().add(jButton28);
-        jButton28.setBounds(207, 163, 47, 30);
+        jButton28.setBounds(207, 163, 45, 30);
 
         jButton29.setText("4E");
         getContentPane().add(jButton29);
-        jButton29.setBounds(257, 235, 47, 30);
+        jButton29.setBounds(257, 235, 45, 30);
 
         jButton30.setText("5E");
         getContentPane().add(jButton30);
-        jButton30.setBounds(257, 271, 47, 30);
+        jButton30.setBounds(257, 271, 45, 30);
 
         jButton31.setText("6E");
         getContentPane().add(jButton31);
-        jButton31.setBounds(257, 307, 47, 30);
+        jButton31.setBounds(257, 307, 45, 30);
 
         jButton32.setText("7E");
         getContentPane().add(jButton32);
-        jButton32.setBounds(257, 343, 47, 30);
+        jButton32.setBounds(257, 343, 45, 30);
 
         jButton33.setText("8E");
         getContentPane().add(jButton33);
-        jButton33.setBounds(257, 379, 47, 30);
+        jButton33.setBounds(257, 379, 45, 30);
 
         jButton34.setText("9E");
         getContentPane().add(jButton34);
-        jButton34.setBounds(257, 415, 47, 30);
+        jButton34.setBounds(257, 415, 45, 30);
 
         jButton35.setText("4F");
         getContentPane().add(jButton35);
-        jButton35.setBounds(306, 235, 47, 30);
+        jButton35.setBounds(306, 235, 45, 30);
 
         jButton36.setText("5F");
         getContentPane().add(jButton36);
-        jButton36.setBounds(306, 271, 47, 30);
+        jButton36.setBounds(306, 271, 45, 30);
 
         jButton37.setText("6F");
         getContentPane().add(jButton37);
-        jButton37.setBounds(306, 307, 47, 30);
+        jButton37.setBounds(306, 307, 45, 30);
 
         jButton38.setText("7F");
         getContentPane().add(jButton38);
-        jButton38.setBounds(306, 343, 47, 30);
+        jButton38.setBounds(306, 343, 45, 30);
 
         jButton39.setText("8F");
         getContentPane().add(jButton39);
-        jButton39.setBounds(306, 379, 47, 30);
+        jButton39.setBounds(306, 379, 45, 30);
 
         btn1d.setText("1D");
         getContentPane().add(btn1d);
-        btn1d.setBounds(207, 127, 47, 30);
+        btn1d.setBounds(207, 127, 45, 30);
 
         jButton41.setText("9F");
         getContentPane().add(jButton41);
-        jButton41.setBounds(306, 415, 47, 30);
+        jButton41.setBounds(306, 415, 45, 30);
 
         jButton42.setText("3D");
         getContentPane().add(jButton42);
-        jButton42.setBounds(207, 199, 47, 30);
+        jButton42.setBounds(207, 199, 45, 30);
 
         jButton43.setText("2F");
         getContentPane().add(jButton43);
-        jButton43.setBounds(306, 163, 47, 30);
+        jButton43.setBounds(306, 163, 45, 30);
 
         jButton44.setText("5D");
         getContentPane().add(jButton44);
-        jButton44.setBounds(207, 271, 47, 30);
+        jButton44.setBounds(207, 271, 45, 30);
 
         jButton45.setText("1F");
         getContentPane().add(jButton45);
-        jButton45.setBounds(306, 127, 47, 30);
+        jButton45.setBounds(306, 127, 45, 30);
 
         jButton46.setText("4D");
         getContentPane().add(jButton46);
-        jButton46.setBounds(207, 235, 47, 30);
+        jButton46.setBounds(207, 235, 45, 30);
 
         jButton47.setText("3F");
         getContentPane().add(jButton47);
-        jButton47.setBounds(306, 199, 47, 30);
+        jButton47.setBounds(306, 199, 45, 30);
 
         jButton48.setText("6D");
         getContentPane().add(jButton48);
-        jButton48.setBounds(207, 307, 47, 30);
+        jButton48.setBounds(207, 307, 45, 30);
 
         jButton49.setText("7D");
         getContentPane().add(jButton49);
-        jButton49.setBounds(207, 343, 47, 30);
+        jButton49.setBounds(207, 343, 45, 30);
 
         jButton50.setText("8D");
         getContentPane().add(jButton50);
-        jButton50.setBounds(207, 379, 47, 30);
+        jButton50.setBounds(207, 379, 45, 30);
 
         jButton51.setText("9D");
         getContentPane().add(jButton51);
-        jButton51.setBounds(207, 415, 47, 30);
+        jButton51.setBounds(207, 415, 45, 30);
 
         jButton52.setText("2E");
         getContentPane().add(jButton52);
-        jButton52.setBounds(257, 163, 47, 30);
+        jButton52.setBounds(257, 163, 45, 30);
 
         jButton53.setText("1E");
         getContentPane().add(jButton53);
-        jButton53.setBounds(257, 127, 47, 30);
+        jButton53.setBounds(257, 127, 45, 30);
 
         jButton54.setText("3E");
         getContentPane().add(jButton54);
-        jButton54.setBounds(257, 199, 47, 30);
+        jButton54.setBounds(257, 199, 45, 30);
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(440, 140, 132, 22);
+        jTextField1.setBounds(440, 140, 132, 20);
 
         jLabel2.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel2.setText("Cantidad de Asinrtos");
@@ -332,7 +332,7 @@ public class VistaAsientos extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextField2);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(440, 220, 127, 24);
+        jScrollPane1.setBounds(440, 220, 127, 22);
 
         jButton1.setText("Aceptar");
         getContentPane().add(jButton1);
@@ -347,9 +347,9 @@ public class VistaAsientos extends javax.swing.JFrame {
         getContentPane().add(jLabel5);
         jLabel5.setBounds(390, 320, 32, 19);
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(440, 320, 120, 22);
+        jTextField3.setBounds(440, 320, 120, 20);
         getContentPane().add(jTextField4);
-        jTextField4.setBounds(560, 10, 130, 22);
+        jTextField4.setBounds(560, 10, 130, 20);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/las-mejores-y-peores-aerolineas-del-mundo-reveladas.jpg"))); // NOI18N
         getContentPane().add(jLabel4);

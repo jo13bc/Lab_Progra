@@ -109,11 +109,11 @@ public class VistaAgregaUsuario extends javax.swing.JFrame {
         getContentPane().add(jLabel7);
         jLabel7.setBounds(10, 290, 130, 19);
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(157, 60, 160, 22);
+        jTextField1.setBounds(157, 60, 160, 20);
         getContentPane().add(jTextField2);
-        jTextField2.setBounds(157, 106, 160, 22);
+        jTextField2.setBounds(157, 106, 160, 20);
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(157, 152, 160, 22);
+        jTextField3.setBounds(157, 152, 160, 20);
 
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,9 +121,9 @@ public class VistaAgregaUsuario extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField4);
-        jTextField4.setBounds(157, 198, 160, 22);
+        jTextField4.setBounds(157, 198, 160, 20);
         getContentPane().add(jTextField5);
-        jTextField5.setBounds(159, 244, 162, 22);
+        jTextField5.setBounds(159, 244, 162, 20);
 
         jLabel8.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel8.setText("Dirección");
@@ -145,9 +145,9 @@ public class VistaAgregaUsuario extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(159, 336, 162, 47);
         getContentPane().add(jTextField8);
-        jTextField8.setBounds(159, 401, 162, 22);
+        jTextField8.setBounds(159, 401, 162, 20);
         getContentPane().add(jTextField9);
-        jTextField9.setBounds(159, 451, 162, 22);
+        jTextField9.setBounds(159, 451, 162, 20);
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/aeromexico.jpg"))); // NOI18N
         getContentPane().add(jLabel14);
