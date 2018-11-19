@@ -1,15 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Modelo;
 
-/**
- *
- * @author Anthony
- */
-public class ModeloSeccionPublica {
+
+import java.util.Observable;
+import AccesoADatos.GlobalException;
+import AccesoADatos.NoDataException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class ModeloSeccionPublica extends Observable {
+
+    
+    public ModeloSeccionPublica() {
  
-    public ModeloSeccionPublica(){}
+    }
+    
+   
+    @Override
+    public void notifyObservers() {
+       
+        super.notifyObservers();
+    }
+    
 }

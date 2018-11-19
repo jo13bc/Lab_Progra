@@ -5,8 +5,4 @@
  */
 package AccesoADatos;
 
-/**
- *
- * @author Fernando
- */
 

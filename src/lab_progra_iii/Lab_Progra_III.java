@@ -5,9 +5,22 @@
  */
 package lab_progra_iii;
 
+import Control.ControlSeccionPublica;
+import Modelo.ModeloSeccionPublica;
+import Vista.VistaSeccionPublica;
+
 public class Lab_Progra_III {
 
     public static void main(String[] args) {
+        
+          ModeloSeccionPublica modelo = new ModeloSeccionPublica();
+
+        VistaSeccionPublica vista=new VistaSeccionPublica();
+        vista.setVisible(true);
+        
+     
+        ControlSeccionPublica control = new ControlSeccionPublica(vista, modelo);
+        
     }
     
 }

@@ -5,18 +5,18 @@
  */
 package Vista;
 
-import Control.ControlAgregaUsuario;
+import Control.ControlRegistrarse;
 
 /**
  *
  * @author Fernando
  */
-public class VistaAgregaUsuario extends javax.swing.JFrame {
+public class VistaRegistrarse extends javax.swing.JFrame {
 
     /**
      * Creates new form AgregaUsuario
      */
-    public VistaAgregaUsuario() {
+    public VistaRegistrarse() {
         initComponents();
     }
 
@@ -41,22 +41,18 @@ public class VistaAgregaUsuario extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
+        jTUsuario = new javax.swing.JTextField();
+        jTNombre = new javax.swing.JTextField();
+        jTApellidos = new javax.swing.JTextField();
+        jTCorreo = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jLabel14 = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
+        jTNacimiento = new javax.swing.JTextField();
+        jTCelular = new javax.swing.JTextField();
+        jPassword1 = new javax.swing.JPasswordField();
+        jTDireccion = new javax.swing.JTextField();
+        jTTelefono = new javax.swing.JTextField();
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Aviones temáticos. 1192015.jpg"))); // NOI18N
 
@@ -67,9 +63,9 @@ public class VistaAgregaUsuario extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        jLabel1.setText("Creando un Nuevo Usuario");
+        jLabel1.setText("Registrar Usuario");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(113, 6, 218, 24);
+        jLabel1.setBounds(140, 10, 140, 24);
 
         btnCancelar.setText("Cancelar");
         getContentPane().add(btnCancelar);
@@ -108,22 +104,20 @@ public class VistaAgregaUsuario extends javax.swing.JFrame {
         jLabel7.setText("Fecha Nacimiento");
         getContentPane().add(jLabel7);
         jLabel7.setBounds(10, 290, 130, 19);
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(157, 60, 160, 20);
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(157, 106, 160, 20);
-        getContentPane().add(jTextField3);
-        jTextField3.setBounds(157, 152, 160, 20);
+        getContentPane().add(jTUsuario);
+        jTUsuario.setBounds(157, 60, 160, 30);
+        getContentPane().add(jTNombre);
+        jTNombre.setBounds(157, 152, 160, 30);
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        jTApellidos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                jTApellidosActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField4);
-        jTextField4.setBounds(157, 198, 160, 20);
-        getContentPane().add(jTextField5);
-        jTextField5.setBounds(159, 244, 162, 20);
+        getContentPane().add(jTApellidos);
+        jTApellidos.setBounds(160, 200, 240, 30);
+        getContentPane().add(jTCorreo);
+        jTCorreo.setBounds(159, 244, 240, 30);
 
         jLabel8.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel8.setText("Dirección");
@@ -133,40 +127,39 @@ public class VistaAgregaUsuario extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel9.setText("Telefono Trabajo");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(6, 407, 120, 19);
+        jLabel9.setBounds(10, 400, 120, 19);
 
         jLabel10.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel10.setText("Celular");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(13, 457, 70, 19);
+        jLabel10.setBounds(20, 440, 70, 19);
+        getContentPane().add(jTNacimiento);
+        jTNacimiento.setBounds(160, 290, 180, 30);
+        getContentPane().add(jTCelular);
+        jTCelular.setBounds(160, 430, 190, 30);
 
-        jScrollPane1.setViewportView(jTextField7);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(159, 336, 162, 47);
-        getContentPane().add(jTextField8);
-        jTextField8.setBounds(159, 401, 162, 20);
-        getContentPane().add(jTextField9);
-        jTextField9.setBounds(159, 451, 162, 20);
-
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/aeromexico.jpg"))); // NOI18N
-        getContentPane().add(jLabel14);
-        jLabel14.setBounds(-170, -20, 760, 630);
-
-        jMenu1.setText("File");
-        jMenuBar1.add(jMenu1);
-
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
-
-        setJMenuBar(jMenuBar1);
+        jPassword1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPassword1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jPassword1);
+        jPassword1.setBounds(160, 100, 160, 30);
+        getContentPane().add(jTDireccion);
+        jTDireccion.setBounds(160, 340, 180, 30);
+        getContentPane().add(jTTelefono);
+        jTTelefono.setBounds(160, 390, 190, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void jTApellidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTApellidosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_jTApellidosActionPerformed
+
+    private void jPassword1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPassword1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPassword1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -185,25 +178,27 @@ public class VistaAgregaUsuario extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VistaAgregaUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaRegistrarse.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VistaAgregaUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaRegistrarse.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VistaAgregaUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaRegistrarse.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VistaAgregaUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaRegistrarse.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new VistaAgregaUsuario().setVisible(true);
+                new VistaRegistrarse().setVisible(true);
             }
         });
     }
-    ControlAgregaUsuario controlAgregaUsuario;
+    ControlRegistrarse registrarse;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancelar;
@@ -213,7 +208,6 @@ public class VistaAgregaUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -222,24 +216,34 @@ public class VistaAgregaUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JPasswordField jPassword1;
+    private javax.swing.JTextField jTApellidos;
+    private javax.swing.JTextField jTCelular;
+    private javax.swing.JTextField jTCorreo;
+    private javax.swing.JTextField jTDireccion;
+    private javax.swing.JTextField jTNacimiento;
+    private javax.swing.JTextField jTNombre;
+    private javax.swing.JTextField jTTelefono;
+    private javax.swing.JTextField jTUsuario;
     // End of variables declaration//GEN-END:variables
 
-    public void setController(ControlAgregaUsuario controlAgregaUsuario) {
+    public void setController(ControlRegistrarse registrarse) {
 
-        this.controlAgregaUsuario = controlAgregaUsuario;
-        btnCancelar.addActionListener(controlAgregaUsuario);
-        btnGuardar.addActionListener(controlAgregaUsuario);
+        this.registrarse = registrarse;
+
+        btnCancelar.addActionListener(registrarse);
+        btnGuardar.addActionListener(registrarse);
+        jPassword1.addActionListener(registrarse);
+        jTApellidos.addActionListener(registrarse);
+        jTCelular.addActionListener(registrarse);
+        jTCorreo.addActionListener(registrarse);
+        jTDireccion.addActionListener(registrarse);
+        jTNacimiento.addActionListener(registrarse);
+        jTNombre.addActionListener(registrarse);
+        jTTelefono.addActionListener(registrarse);
+        jTUsuario.addActionListener(registrarse);
     }
 }
+
+     
+    // End of variables declaration                   

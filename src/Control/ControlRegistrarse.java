@@ -5,8 +5,8 @@
  */
 package Control;
 
-import Modelo.ModeloAgregarUsuario;
-import Vista.VistaAgregaUsuario;
+import Modelo.ModeloRegistrarse;
+import Vista.VistaRegistrarse;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
@@ -16,11 +16,11 @@ import java.awt.event.WindowEvent;
  *
  * @author Fernando
  */
-public class ControlAgregaUsuario  extends AbstractController{
+public class ControlRegistrarse  extends AbstractController{
 
-    ModeloAgregarUsuario modeloAgregarUsuario;
-    VistaAgregaUsuario vistaAgregaUsuario;
-    ControlAgregaUsuario(ModeloAgregarUsuario modeloAgregarUsuario, VistaAgregaUsuario vistaAgregaUsuario) {
+    ModeloRegistrarse modeloAgregarUsuario;
+    VistaRegistrarse vistaAgregaUsuario;
+    ControlRegistrarse(ModeloRegistrarse modeloAgregarUsuario, VistaRegistrarse vistaAgregaUsuario) {
         this.modeloAgregarUsuario = modeloAgregarUsuario;
         this.vistaAgregaUsuario = vistaAgregaUsuario;
         this.vistaAgregaUsuario.setController(this);

@@ -9,6 +9,6 @@ package Modelo;
  *
  * @author Anthony
  */
-public class ModeloAgregarUsuario {
-    public ModeloAgregarUsuario(){};
+public class ModeloRegistrarse {
+    public ModeloRegistrarse(){};
 }
