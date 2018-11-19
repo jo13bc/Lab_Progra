@@ -5,17 +5,9 @@
  */
 package lab_progra_iii;
 
-/**
- *
- * @author MikerJABC
- */
 public class Lab_Progra_III {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
     }
     
 }

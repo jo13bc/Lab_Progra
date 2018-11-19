@@ -1,62 +1,77 @@
 package Logica;
 
-
 public class Avion {
+    private String identificador;
+    private String anno;
+    private String modelo;
+    private String marca;
+    private int cantidadPasajeros;
+    private int catidadFilas;
+    private int cantidadColumnas;
 
-    
-    
-    public String identificador;
-    public String ruta;
-    public String horario;
-    public String tipo;
-    
-
-    public Avion(String identificador, String ruta, String horario, String tipo) {
+    public Avion(String identificador, String anno, String modelo, String marca, int cantidadPasajeros, int catidadFilas, int cantidadColumnas) {
         this.identificador = identificador;
-        this.ruta = ruta;
-        this.horario = horario;
-        this.tipo = tipo;
+        this.anno = anno;
+        this.modelo = modelo;
+        this.marca = marca;
+        this.cantidadPasajeros = cantidadPasajeros;
+        this.catidadFilas = catidadFilas;
+        this.cantidadColumnas = cantidadColumnas;
     }
-    
+
     public String getIdentificador() {
         return identificador;
     }
 
-    
     public void setIdentificador(String identificador) {
         this.identificador = identificador;
     }
 
-    
-    public String getRuta() {
-        return ruta;
+    public String getAnno() {
+        return anno;
     }
 
-    
-    public void setRuta(String ruta) {
-        this.ruta = ruta;
+    public void setAnno(String anno) {
+        this.anno = anno;
     }
 
-   
-    public String getHorario() {
-        return horario;
+    public String getModelo() {
+        return modelo;
     }
 
-   
-    public void setHorario(String horario) {
-        this.horario = horario;
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
     }
 
-   
-    public String getTipo() {
-        return tipo;
+    public String getMarca() {
+        return marca;
     }
 
-  
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setMarca(String marca) {
+        this.marca = marca;
     }
 
+    public int getCantidadPasajeros() {
+        return cantidadPasajeros;
+    }
 
-   
+    public void setCantidadPasajeros(int cantidadPasajeros) {
+        this.cantidadPasajeros = cantidadPasajeros;
+    }
+
+    public int getCatidadFilas() {
+        return catidadFilas;
+    }
+
+    public void setCatidadFilas(int catidadFilas) {
+        this.catidadFilas = catidadFilas;
+    }
+
+    public int getCantidadColumnas() {
+        return cantidadColumnas;
+    }
+
+    public void setCantidadColumnas(int cantidadColumnas) {
+        this.cantidadColumnas = cantidadColumnas;
+    }
 }
