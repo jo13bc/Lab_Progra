@@ -41,10 +41,10 @@ public class ServicioAvion  extends Servicio{
         try {
             pstmt = conexion.prepareCall(INSERTARAVION);
 
-            pstmt.setString(1, elAvion.getIdentificador());
-            pstmt.setString(2, elAvion.getRuta());
-            pstmt.setString(3, elAvion.getHorario());
-            pstmt.setString(4, elAvion.getTipo());
+//            pstmt.setString(1, elAvion.getIdentificador());
+//            pstmt.setString(2, elAvion.getRuta());
+//            pstmt.setString(3, elAvion.getHorario());
+//            pstmt.setString(4, elAvion.getTipo());
             
             
             
@@ -128,11 +128,11 @@ public class ServicioAvion  extends Servicio{
 
             while (rs.next()) {
                 if (rs.getString("serial").equals(elIdentificador)) {
-                    elAvion = new Avion(rs.getString("identificador"),
-                            rs.getString("ruta"),
-                            rs.getString("horario"),
-                            rs.getString("tipo")
-                    );
+//                    elAvion = new Avion(rs.getString("identificador"),
+//                            rs.getString("ruta"),
+//                            rs.getString("horario"),
+//                            rs.getString("tipo")
+//                    );
                     break;
                 }
             }
@@ -178,11 +178,11 @@ public class ServicioAvion  extends Servicio{
             pstmt.execute();
             rs = (ResultSet) pstmt.getObject(1);
             while (rs.next()) {
-                elAvion = new Avion(rs.getString("identificador"),
-                        rs.getString("ruta"),
-                        rs.getString("horario"),
-                        rs.getString("tipo")
-                );
+//                elAvion = new Avion(rs.getString("identificador"),
+//                        rs.getString("ruta"),
+//                        rs.getString("horario"),
+//                        rs.getString("tipo")
+//                );
                 coleccion.add(elAvion);
             }
         } catch (SQLException e) {

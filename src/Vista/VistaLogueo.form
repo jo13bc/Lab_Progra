@@ -33,9 +33,9 @@
                   <Component id="jPanel7" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="0" pref="391" max="32767" attributes="0"/>
-                      <Component id="salir" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnSalir" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Ingresar" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnIngresar" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -51,8 +51,8 @@
               <Component id="jPanel7" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="Ingresar" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="salir" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnIngresar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnSalir" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -70,16 +70,16 @@
         <Property name="horizontalTextPosition" type="int" value="0"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="Ingresar">
+    <Component class="javax.swing.JButton" name="btnIngresar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ingresar"/>
         <Property name="name" type="java.lang.String" value="ingresar" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="salir">
+    <Component class="javax.swing.JButton" name="btnSalir">
       <Properties>
         <Property name="text" type="java.lang.String" value="Salir"/>
-        <Property name="name" type="java.lang.String" value="salir" noResource="true"/>
+        <Property name="name" type="java.lang.String" value="btnSalir" noResource="true"/>
       </Properties>
     </Component>
     <Container class="javax.swing.JPanel" name="jPanel7">

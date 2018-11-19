@@ -35,8 +35,8 @@ public class VistaLogueo extends javax.swing.JFrame implements Observer{
     private void initComponents() {
 
         jLabel4 = new javax.swing.JLabel();
-        Ingresar = new javax.swing.JButton();
-        salir = new javax.swing.JButton();
+        btnIngresar = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
         jtfPassword6 = new javax.swing.JPasswordField();
         id6 = new javax.swing.JLabel();
@@ -51,11 +51,11 @@ public class VistaLogueo extends javax.swing.JFrame implements Observer{
         jLabel4.setText("Ingresar");
         jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        Ingresar.setText("Ingresar");
-        Ingresar.setName("ingresar"); // NOI18N
+        btnIngresar.setText("Ingresar");
+        btnIngresar.setName("ingresar"); // NOI18N
 
-        salir.setText("Salir");
-        salir.setName("salir"); // NOI18N
+        btnSalir.setText("Salir");
+        btnSalir.setName("btnSalir"); // NOI18N
 
         jPanel7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -106,9 +106,9 @@ public class VistaLogueo extends javax.swing.JFrame implements Observer{
                     .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 391, Short.MAX_VALUE)
-                        .addComponent(salir)
+                        .addComponent(btnSalir)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Ingresar)))
+                        .addComponent(btnIngresar)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -120,8 +120,8 @@ public class VistaLogueo extends javax.swing.JFrame implements Observer{
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Ingresar)
-                    .addComponent(salir))
+                    .addComponent(btnIngresar)
+                    .addComponent(btnSalir))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -164,14 +164,14 @@ public class VistaLogueo extends javax.swing.JFrame implements Observer{
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Ingresar;
+    private javax.swing.JButton btnIngresar;
+    private javax.swing.JButton btnSalir;
     public javax.swing.JTextField ftfId6;
     private javax.swing.JLabel id6;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel7;
     public javax.swing.JPasswordField jtfPassword6;
     private javax.swing.JLabel password6;
-    private javax.swing.JButton salir;
     // End of variables declaration//GEN-END:variables
 
 
@@ -186,7 +186,7 @@ public class VistaLogueo extends javax.swing.JFrame implements Observer{
     public void setControlador(ControlLogueo controlador){
         this.controlador = controlador;
         btnIngresar.addActionListener(controlador);
-        btnCancelar.addActionListener(controlador);
+        btnSalir.addActionListener(controlador);
     }
     
     public void mostrarMensaje(String mensaje) {
