@@ -73,6 +73,12 @@ public class ControlSeccionPublica implements ActionListener, MouseListener, Key
             }
 
             break;
+            
+            case "Buscador de vuelos": {
+                System.out.println("bus");
+            }
+
+            break;
 
         }
     }
