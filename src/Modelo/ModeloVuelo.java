@@ -1,23 +1,22 @@
 package Modelo;
 
-
+import Logica.Vuelo;
 import java.util.Observable;
 import AccesoADatos.GlobalException;
 import AccesoADatos.NoDataException;
-import AccesoADatos.ServicioSeccionPublica;
-import Logica.Vuelo;
+import AccesoADatos.ServicioVuelo;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class ModeloSeccionPublica extends Observable {
+public class ModeloVuelo extends Observable {
 
     private Vuelo vuelo;
-    private ServicioSeccionPublica dbV;
+    private ServicioVuelo dbV;
     private ArrayList<Vuelo> arregloConVuelos;
 
-    public ModeloSeccionPublica() {
+    public ModeloVuelo() {
 
         vuelo = null;
         arregloConVuelos = new ArrayList();
@@ -118,11 +117,11 @@ public class ModeloSeccionPublica extends Observable {
         return vuelo;
     }
 
-    public ServicioSeccionPublica getDb() {
+    public ServicioVuelo getDb() {
         return dbV;
     }
 
-    public void setDb(ServicioSeccionPublica dbV) {
+    public void setDb(ServicioVuelo dbV) {
         this.dbV = dbV;
         arregloConVuelos.removeAll(arregloConVuelos);
         arregloConVuelos = getListaVuelo();
@@ -187,10 +186,9 @@ public class ModeloSeccionPublica extends Observable {
         this.notifyObservers();
 
     }
-    
-   
+
     @Override
-     public void notifyObservers() {
+    public void notifyObservers() {
         ArrayList<Object> lista = new ArrayList();
         Iterator<Vuelo> ite = arregloConVuelos.iterator();
 
@@ -209,5 +207,5 @@ public class ModeloSeccionPublica extends Observable {
         }
         super.notifyObservers(lista);
     }
-    
+
 }

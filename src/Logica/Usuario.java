@@ -7,7 +7,7 @@ public class Usuario {
 
   
     public String usuario;
-    public String password;
+    public String contrasena;
     public String nombre;
     public String apellidos;
     public String email;
@@ -17,10 +17,10 @@ public class Usuario {
     public int celular;
     
     
-    public Usuario(String usuario, String password, String nombre, String apellidos,
+    public Usuario(String usuario, String contrasena, String nombre, String apellidos,
             String email, String fecha, String direccion, int telefonoTrabajo, int celular) {
         this.usuario  = usuario;
-        this.password = password;
+        this.contrasena = contrasena;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.email = email;
@@ -42,12 +42,12 @@ public class Usuario {
 
  
     public String getPassword() {
-        return password;
+        return contrasena;
     }
 
  
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPassword(String contrasena) {
+        this.contrasena = contrasena;
     }
 
 

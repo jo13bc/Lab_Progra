@@ -12,10 +12,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.WindowEvent;
 
-/**
- *
- * @author Fernando
- */
+
 public class ControlVuelos extends AbstractController{
 
     ModeloVuelos modeloVuelos; 

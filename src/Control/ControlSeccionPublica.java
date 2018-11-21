@@ -7,6 +7,7 @@ package Control;
 
  
 
+import AccesoADatos.ServicioSeccionPublica;
 import Vista.VistaSeccionPublica;
 import Modelo.ModeloSeccionPublica;
 import Vista.VistaRegistrarse;
@@ -26,14 +27,32 @@ import javax.swing.JButton;
 public class ControlSeccionPublica implements ActionListener, MouseListener, KeyListener {
 
     private VistaSeccionPublica vista;
+//    private ModeloSeccionPublica modeloSeccionPublica;
+    private ServicioSeccionPublica accesoADatosSeccionPublica = ServicioSeccionPublica.getServicioSeccionPublica();
+  
     private ModeloSeccionPublica modeloSeccionPublica = new ModeloSeccionPublica();
-    private  VistaRegistrarse registrarse;
+
     public ControlSeccionPublica(VistaSeccionPublica vista, ModeloSeccionPublica modeloSeccionPublica) {
         this.vista = vista;
         this.modeloSeccionPublica = modeloSeccionPublica;
         vista.setModelo(modeloSeccionPublica);
         vista.setControlador(this);
+        this.modeloSeccionPublica.setDb(accesoADatosSeccionPublica);
     
+    
+    
+    
+    
+    
+//    private VistaSeccionPublica vista;
+//    private ModeloSeccionPublica modeloSeccionPublica = new ModeloSeccionPublica();
+//    private  VistaRegistrarse registrarse;
+//    public ControlSeccionPublica(VistaSeccionPublica vista, ModeloSeccionPublica modeloSeccionPublica) {
+//        this.vista = vista;
+//        this.modeloSeccionPublica = modeloSeccionPublica;
+//        vista.setModelo(modeloSeccionPublica);
+//        vista.setControlador(this);
+//    
 //       VistaRegistrarse.setControlador(this);
 //       VistaRegistrarse.addWindowListener(this);
     }
@@ -44,7 +63,7 @@ public class ControlSeccionPublica implements ActionListener, MouseListener, Key
          
             case "Registrarse": {
     
-      registrarse.setVisible(true);
+//      registrarse.setVisible(true);
        
     }
                 
