@@ -74,6 +74,39 @@ public class ModeloSeccionPublica extends Observable {
         ArrayList<Object> lista = new ArrayList();
         Iterator<Vuelo> ite = arregloConVuelos.iterator();
 
+        
+//        public ArrayList<Object> getListaSolicitudes() {
+//        ArrayList<Object> list = new ArrayList();
+//        try {
+//            if (tipo.equals(tiposSolicitud[0])) {
+//                if (solicitud == null) {
+//                    Iterator<Solicitud> ite = servicioSolicitud.listarSolicitudes().iterator();
+//                    while (ite.hasNext()) {
+//                        Solicitud solicitud = ite.next();
+//                        if (solicitud.getEstado().equalsIgnoreCase("por verificar") && servicioSolicitud.buscarFuncionarioAsignadoSolicitud(solicitud.getNumeroSolicitud()) == null) {
+//                            Object[] fila = new Object[6];
+//                            fila[0] = solicitud.getNumeroSolicitud();
+//                            fila[1] = solicitud.getFecha();
+//                            fila[2] = solicitud.getTipo();
+//                            fila[3] = solicitud.getEstado();
+//                            fila[4] = solicitud.getCantiadadBienes();
+//                            fila[5] = solicitud.getMontoTotal();
+//                            list.add(fila);
+//                        }
+//                    }
+//                } else {
+//                    Object[] fila = new Object[6];
+//                    fila[0] = solicitud.getNumeroSolicitud();
+//                    fila[1] = solicitud.getFecha();
+//                    fila[2] = solicitud.getTipo();
+//                    fila[3] = solicitud.getEstado();
+//                    fila[4] = solicitud.getCantiadadBienes();
+//                    fila[5] = solicitud.getMontoTotal();
+//                    list.add(fila);
+//                }
+//        
+        
+        
         while (ite.hasNext()) {
             Vuelo e = ite.next();
             Object[] fila = new Object[7];
@@ -85,7 +118,9 @@ public class ModeloSeccionPublica extends Observable {
             fila[4] = e.getCantidadPasajeros();
             fila[5] = e.getDescuento();
 
+            if(e.getDescuento()!=0){
             lista.add(fila);
+            }
         }
         super.notifyObservers(lista);
     }
