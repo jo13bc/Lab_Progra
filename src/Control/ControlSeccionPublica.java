@@ -59,7 +59,7 @@ public class ControlSeccionPublica implements ActionListener, MouseListener, Key
         switch (evt.getActionCommand()) {
 
             case "Registrarse": 
-                System.out.println("aaaaiiiiuuuddaaaa");
+                System.out.println("registrarse");
                 vistaR.setVisible(true);
 
             
