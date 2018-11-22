@@ -20,7 +20,7 @@ public class Lab_Progra_III {
         
      
         ControlSeccionPublica control = new ControlSeccionPublica(vista, modelo);
-        
+   
     }
     
 }

@@ -17,7 +17,7 @@ public class ServicioVuelo extends Servicio {
     private static final String BUSCARVUELOTIPO = "{?=call buscarVueloprecio(?)}";
     private static ServicioVuelo servicioVuelo = new ServicioVuelo();
 
-    private ServicioVuelo() {
+    public ServicioVuelo() {
     }
 
     public void insertarVuelo(Vuelo elVuelo) throws GlobalException, NoDataException {

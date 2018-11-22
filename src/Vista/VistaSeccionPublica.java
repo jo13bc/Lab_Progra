@@ -13,6 +13,7 @@ import java.util.Iterator;
 import java.util.Observable;
 import java.util.Observer;
 import javax.swing.JOptionPane;
+import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
@@ -23,8 +24,6 @@ import javax.swing.table.DefaultTableModel;
 public class VistaSeccionPublica extends javax.swing.JFrame implements Observer {
 
     private DefaultTableModel model;
-    private ModeloSeccionPublica modelo;
-    private ControlSeccionPublica controlador;
 
     public VistaSeccionPublica() {
         initComponents();
@@ -35,10 +34,17 @@ public class VistaSeccionPublica extends javax.swing.JFrame implements Observer 
         model = (DefaultTableModel) jTDescuentos.getModel();
         setTitle("Principal");
         setLocationRelativeTo(null);
-       
+        DefaultTableCellRenderer tcr = new DefaultTableCellRenderer();
+        tcr.setHorizontalAlignment(SwingConstants.LEFT);
+        //Ajustar el texto a la izquierta
+        jTDescuentos.getColumnModel().getColumn(0).setCellRenderer(tcr);//Numero
+        jTDescuentos.getColumnModel().getColumn(1).setCellRenderer(tcr);//Fecha
+        jTDescuentos.getColumnModel().getColumn(2).setCellRenderer(tcr);//Tipo
+        jTDescuentos.getColumnModel().getColumn(3).setCellRenderer(tcr);//Estado
+        jTDescuentos.getColumnModel().getColumn(4).setCellRenderer(tcr);//CantidadBienes
+        jTDescuentos.getColumnModel().getColumn(5).setCellRenderer(tcr);//MontoTotal
         this.setResizable(false);
     }
-
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -79,12 +85,6 @@ public class VistaSeccionPublica extends javax.swing.JFrame implements Observer 
 
         jTDescuentos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -165,41 +165,12 @@ public class VistaSeccionPublica extends javax.swing.JFrame implements Observer 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VistaSeccionPublica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VistaSeccionPublica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VistaSeccionPublica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VistaSeccionPublica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
+     public static void main(String args[]) {
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new VistaSeccionPublica().setVisible(true);
+               
             }
         });
     }
@@ -221,10 +192,18 @@ public class VistaSeccionPublica extends javax.swing.JFrame implements Observer 
     public javax.swing.JMenuItem jmregistrarse;
     // End of variables declaration//GEN-END:variables
 
+    
+    
+    
+    private ModeloSeccionPublica modelo;
+    private ControlSeccionPublica controlador;
+
     public void setModelo(ModeloSeccionPublica modelo) {
         this.modelo = modelo;
-
+        modelo.addObserver(this);
+    
     }
+
 
     public void setControlador(ControlSeccionPublica controlador) {
         this.controlador = controlador;
@@ -234,24 +213,8 @@ public class VistaSeccionPublica extends javax.swing.JFrame implements Observer 
         jTA1.setEditable(false);
 
     }
-
-//   private ModeloLogin modelo;
-//    private ControllerLogin controlador;
-//    
-//    public void setModelo(ModeloLogin modelo){
-//        this.modelo = modelo;
-//        modelo.addObserver(this);
-//    }
-//    
-//    public void setControlador(ControllerLogin controlador){
-//        this.controlador = controlador;
-//        Ingresar.addActionListener(controlador);
-//        salir.addActionListener(controlador);
-//    }
-//    
-//    public void mostrarMensaje(String mensaje) {
-//        JOptionPane.showMessageDialog(this, mensaje);
-//    }
+    
+     
     @Override
     public void update(Observable o, Object o1) {
         if (o1 != null) {
