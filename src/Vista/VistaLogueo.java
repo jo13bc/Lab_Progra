@@ -54,7 +54,7 @@ public class VistaLogueo extends javax.swing.JFrame implements Observer{
         btnIngresar.setText("Ingresar");
         btnIngresar.setName("ingresar"); // NOI18N
 
-        btnSalir.setText("Salir");
+        btnSalir.setText("Atras");
         btnSalir.setName("btnSalir"); // NOI18N
 
         jPanel7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -105,7 +105,7 @@ public class VistaLogueo extends javax.swing.JFrame implements Observer{
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 391, Short.MAX_VALUE)
+                        .addGap(0, 385, Short.MAX_VALUE)
                         .addComponent(btnSalir)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnIngresar)))

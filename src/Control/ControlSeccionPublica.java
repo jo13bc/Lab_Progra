@@ -6,9 +6,11 @@
 package Control;
 
 import AccesoADatos.ServicioSeccionPublica;
+import Modelo.ModeloLogin;
 import Modelo.ModeloRegistrar;
 import Vista.VistaSeccionPublica;
 import Modelo.ModeloSeccionPublica;
+import Vista.VistaLogueo;
 import Vista.VistaRegistrar;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -24,6 +26,10 @@ import javax.swing.JButton;
 public class ControlSeccionPublica implements ActionListener, MouseListener, KeyListener {
 
  
+    VistaLogueo vistaL=new VistaLogueo();
+    ModeloLogin modeloL=new ModeloLogin();
+    ControlLogueo controladorL=new ControlLogueo(modeloL,vistaL);
+    
     VistaRegistrar vistaR=new VistaRegistrar();
     ModeloRegistrar modeloR=new ModeloRegistrar();
     ControlRegistrar controladorR=new ControlRegistrar(modeloR,vistaR);
@@ -52,16 +58,25 @@ public class ControlSeccionPublica implements ActionListener, MouseListener, Key
     public void actionPerformed(ActionEvent evt) {
         switch (evt.getActionCommand()) {
 
-            case "Registrarse": {
-
+            case "Registrarse": 
+                System.out.println("aaaaiiiiuuuddaaaa");
                 vistaR.setVisible(true);
 
-            }
+            
 
             break;
 
             case "Logueo": {
                 System.out.println("log");
+               
+                vistaL.setVisible(true);
+            }
+
+            break;
+            
+            case "Atras": {
+                System.out.println("atras2");
+                
             }
 
             break;

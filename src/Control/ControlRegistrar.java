@@ -5,6 +5,8 @@
  */
 package Control;
 
+import AccesoADatos.GlobalException;
+import AccesoADatos.NoDataException;
 import Modelo.ModeloRegistrar;
 import Vista.VistaRegistrar;
 import Vista.VistaUsuario;
@@ -52,11 +54,15 @@ public class ControlRegistrar  extends AbstractController{
      int telefonoTrabajo=Integer.parseInt(vistaAgregaUsuario.getjTTelefono().getText());
      int celular=Integer.parseInt(vistaAgregaUsuario.getjTCelular().getText());
  
+         
             try {
                 modeloAgregarUsuario.insertarUsuario(usuario, contrasena, nombre, apellidos, correoElectronico, fecha, direccion, telefonoTrabajo, celular);
-            } catch (Exception ex) {
+            } catch (GlobalException ex) {
+                Logger.getLogger(ControlRegistrar.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (NoDataException ex) {
                 Logger.getLogger(ControlRegistrar.class.getName()).log(Level.SEVERE, null, ex);
             }
+           
                    
 //                }
 //                vista.limpiarEspacios();

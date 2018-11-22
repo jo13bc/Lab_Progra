@@ -13,10 +13,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Observable;
 
-/**
- *
- * @author Anthony
- */
+
 public class ModeloRegistrar extends Observable {
 
     private Usuario usuario;
@@ -25,7 +22,7 @@ public class ModeloRegistrar extends Observable {
 
     public ModeloRegistrar() {
 
-        usuario = null;
+//        usuario = null;
         arregloConUsuarios = new ArrayList();
 
     }
@@ -54,27 +51,42 @@ public class ModeloRegistrar extends Observable {
         this.notifyObservers();
     }
 
+//    public void insertarUsuario(String usuario, String contrasena, String nombre, String apellidos,
+//            String correoElectronico, String fecha, String direccion, int telefonoTrabajo, int celular) throws Exception {
+//        try {
+////            if (usuario.equals("")) {
+////                throw (new Exception("usuario invalido"));
+////            }
+////            if (nombre.equals("")) {
+////                throw (new Exception("Nombre invalido"));
+////            }
+////            if (precio.equals("")) {
+////                throw (new Exception("Precio invalido"));
+////            }
+//Usuario usu=new Usuario( usuario,  contrasena,  nombre,  apellidos,correoElectronico,  
+//                    fecha,  direccion,  telefonoTrabajo,  celular);
+//            System.out.println(usu.toString());
+//            dbU.insertarUsuario(usu);
+//           
+//        } catch (Exception ex) {
+//            throw (new Exception(ex.getMessage()));
+//        }
+//    }
+    
+    
+    
+    
     public void insertarUsuario(String usuario, String contrasena, String nombre, String apellidos,
-            String correoElectronico, String fecha, String direccion, int telefonoTrabajo, int celular) throws Exception {
-        try {
-//            if (usuario.equals("")) {
-//                throw (new Exception("usuario invalido"));
-//            }
-//            if (nombre.equals("")) {
-//                throw (new Exception("Nombre invalido"));
-//            }
-//            if (precio.equals("")) {
-//                throw (new Exception("Precio invalido"));
-//            }
-Usuario usu=new Usuario( usuario,  contrasena,  nombre,  apellidos,correoElectronico,  
-                    fecha,  direccion,  telefonoTrabajo,  celular);
-            System.out.println(usu.toString());
-            dbU.insertarUsuario(usu);
-           
-        } catch (Exception ex) {
-            throw (new Exception(ex.getMessage()));
-        }
+            String correoElectronico, String fecha, String direccion, int telefonoTrabajo, int celular) throws GlobalException, NoDataException {
+        
+         dbU.insertarUsuario(new Usuario (usuario,  contrasena,  nombre,  apellidos,correoElectronico,  
+                    fecha,  direccion,  telefonoTrabajo,  celular));
+        
     }
+    
+    
+    
+    
     
        public ArrayList<Usuario> getListaUsuario() {
         ArrayList<Usuario> list = null;

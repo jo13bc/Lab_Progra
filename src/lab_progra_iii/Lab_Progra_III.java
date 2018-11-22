@@ -5,9 +5,15 @@
  */
 package lab_progra_iii;
 
+import AccesoADatos.GlobalException;
+import AccesoADatos.NoDataException;
+import AccesoADatos.ServicioUsuario;
 import Control.ControlSeccionPublica;
+import Logica.Usuario;
 import Modelo.ModeloSeccionPublica;
 import Vista.VistaSeccionPublica;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Lab_Progra_III {
 
@@ -21,6 +27,8 @@ public class Lab_Progra_III {
      
         ControlSeccionPublica control = new ControlSeccionPublica(vista, modelo);
    
+      
+        
     }
     
 }
