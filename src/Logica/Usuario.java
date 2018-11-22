@@ -41,12 +41,12 @@ public class Usuario {
     }
 
  
-    public String getPassword() {
+    public String getContrasena() {
         return contrasena;
     }
 
  
-    public void setPassword(String contrasena) {
+    public void setContrasena(String contrasena) {
         this.contrasena = contrasena;
     }
 
