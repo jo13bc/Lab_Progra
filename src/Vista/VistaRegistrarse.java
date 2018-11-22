@@ -105,9 +105,9 @@ public class VistaRegistrarse extends javax.swing.JFrame {
         getContentPane().add(jLabel7);
         jLabel7.setBounds(10, 290, 130, 19);
         getContentPane().add(jTUsuario);
-        jTUsuario.setBounds(157, 60, 160, 30);
+        jTUsuario.setBounds(160, 60, 160, 30);
         getContentPane().add(jTNombre);
-        jTNombre.setBounds(157, 152, 160, 30);
+        jTNombre.setBounds(160, 150, 160, 30);
 
         jTApellidos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
