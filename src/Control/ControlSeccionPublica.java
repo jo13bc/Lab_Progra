@@ -5,12 +5,11 @@
  */
 package Control;
 
- 
-
 import AccesoADatos.ServicioSeccionPublica;
+import Modelo.ModeloRegistrar;
 import Vista.VistaSeccionPublica;
 import Modelo.ModeloSeccionPublica;
-import Vista.VistaRegistrarse;
+import Vista.VistaRegistrar;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -22,88 +21,56 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JButton;
 
-
-
 public class ControlSeccionPublica implements ActionListener, MouseListener, KeyListener {
+
+ 
+    VistaRegistrar vistaR=new VistaRegistrar();
+    ModeloRegistrar modeloR=new ModeloRegistrar();
+    ControlRegistrar controladorR=new ControlRegistrar(modeloR,vistaR);
 
     private VistaSeccionPublica vista;
 //    private ModeloSeccionPublica modeloSeccionPublica;
     private ServicioSeccionPublica accesoADatosSeccionPublica = ServicioSeccionPublica.getServicioSeccionPublica();
-  
+
     private ModeloSeccionPublica modeloSeccionPublica = new ModeloSeccionPublica();
 
+//    private ModeloRegistrar modeloRegistrarse = new ModeloRegistrar();
     public ControlSeccionPublica(VistaSeccionPublica vista, ModeloSeccionPublica modeloSeccionPublica) {
         this.vista = vista;
+//        this.vistaR = vistaR;
         this.modeloSeccionPublica = modeloSeccionPublica;
+//        this.modeloRegistrarse = modeloRegistrarse;
+        vista.setModelo(modeloSeccionPublica);
+        vista.setControlador(this);
         vista.setModelo(modeloSeccionPublica);
         vista.setControlador(this);
         this.modeloSeccionPublica.setDb(accesoADatosSeccionPublica);
-    
-    
-    
-    
-    
-    
-//    private VistaSeccionPublica vista;
-//    private ModeloSeccionPublica modeloSeccionPublica = new ModeloSeccionPublica();
-//    private  VistaRegistrarse registrarse;
-//    public ControlSeccionPublica(VistaSeccionPublica vista, ModeloSeccionPublica modeloSeccionPublica) {
-//        this.vista = vista;
-//        this.modeloSeccionPublica = modeloSeccionPublica;
-//        vista.setModelo(modeloSeccionPublica);
-//        vista.setControlador(this);
-//    
-//       VistaRegistrarse.setControlador(this);
-//       VistaRegistrarse.addWindowListener(this);
+
     }
 
     @Override
     public void actionPerformed(ActionEvent evt) {
         switch (evt.getActionCommand()) {
-         
+
             case "Registrarse": {
-    
-//      registrarse.setVisible(true);
-       
-    }
-                
+
+                vistaR.setVisible(true);
+
+            }
+
             break;
-            
+
             case "Logueo": {
                 System.out.println("log");
             }
 
             break;
-            
-            case "  Referente instucicional": {
-                System.out.println("ref");
-            }
-
-            break;
-            
-            case "Historia": {
-                System.out.println("his");
-            }
-
-            break;
-            
-            case "Contactenos": {
-                System.out.println("con");
-            }
-
-            break;
-            
-            case "Buscador de vuelos": {
-                System.out.println("bus");
-            }
-
-            break;
-
+ 
         }
     }
 
     @Override
-    public void mouseClicked(MouseEvent me) {        
+    public void mouseClicked(MouseEvent me) {
 
     }
 
@@ -130,11 +97,10 @@ public class ControlSeccionPublica implements ActionListener, MouseListener, Key
 
     @Override
     public void keyPressed(KeyEvent ke) {
-        
+
     }
 
     @Override
     public void keyReleased(KeyEvent ke) {
     }
 }
-

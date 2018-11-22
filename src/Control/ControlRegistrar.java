@@ -5,8 +5,8 @@
  */
 package Control;
 
-import Modelo.ModeloRegistrarse;
-import Vista.VistaRegistrarse;
+import Modelo.ModeloRegistrar;
+import Vista.VistaRegistrar;
 import Vista.VistaUsuario;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
@@ -19,18 +19,18 @@ import java.util.logging.Logger;
  *
  * @author Fernando
  */
-public class ControlRegistrarse  extends AbstractController{
+public class ControlRegistrar  extends AbstractController{
 
     private VistaUsuario vu;
     
     
     
-    ModeloRegistrarse modeloAgregarUsuario;
-    VistaRegistrarse vistaAgregaUsuario;
-    ControlRegistrarse(ModeloRegistrarse modeloAgregarUsuario, VistaRegistrarse vistaAgregaUsuario) {
+    ModeloRegistrar modeloAgregarUsuario;
+    VistaRegistrar vistaAgregaUsuario;
+    ControlRegistrar(ModeloRegistrar modeloAgregarUsuario, VistaRegistrar vistaAgregaUsuario) {
         this.modeloAgregarUsuario = modeloAgregarUsuario;
         this.vistaAgregaUsuario = vistaAgregaUsuario;
-        this.vistaAgregaUsuario.setController(this);
+        this.vistaAgregaUsuario.setControlador(this);
     }
 
  @Override
@@ -42,38 +42,38 @@ public class ControlRegistrarse  extends AbstractController{
           
                 System.out.println("guardar");
                 
-//                int numero = Integer.parseInt(VistaRegistrarse.getText());
-//                int factura = Integer.parseInt(vistaAgregaUsuario.getJTextField3().getText());    
-//                String producto="";
-//                int cantidad = Integer.parseInt(vu.getJTextField4().getText());
-//                String tipo = "";
-//
-//                if (vista.getjComboBox2().getSelectedItem().toString().equals("Suntuario")) {
-//                    tipo = "Sun";
-//
-//                }
-//                if (vista.getjComboBox2().getSelectedItem().toString().equals("Can. Basca")) {
-//                    tipo = "Bas";
-//
-//                }
-//                if (vista.getjComboBox2().getSelectedItem().toString().equals("Popular")) {
-//                    tipo = "Pop";
-//
-//                }
-
-//                 {
-//                    try {
-//                        modeloDetalle.crearDetalle(numero, factura, producto,cantidad);
-//                    } catch (Exception ex) {
-//                        Logger.getLogger(ControladorDetalle.class.getName()).log(Level.SEVERE, null, ex);
-//                    }
+     String usuario=vistaAgregaUsuario.getjTUsuario().getText();
+     String contrasena=vistaAgregaUsuario.getjPassword1().getText();
+     String nombre=vistaAgregaUsuario.getjTNombre().getText();
+     String apellidos=vistaAgregaUsuario.getjTApellidos().getText();
+     String correoElectronico=vistaAgregaUsuario.getjTCorreo().getText();
+     String fecha=vistaAgregaUsuario.getjTNacimiento().getText();
+     String direccion=vistaAgregaUsuario.getjTDireccion().getText();
+     int telefonoTrabajo=Integer.parseInt(vistaAgregaUsuario.getjTTelefono().getText());
+     int celular=Integer.parseInt(vistaAgregaUsuario.getjTCelular().getText());
+ 
+            try {
+                modeloAgregarUsuario.insertarUsuario(usuario, contrasena, nombre, apellidos, correoElectronico, fecha, direccion, telefonoTrabajo, celular);
+            } catch (Exception ex) {
+                Logger.getLogger(ControlRegistrar.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                   
 //                }
 //                vista.limpiarEspacios();
 //
 //                modeloDetalle.notifyObservers(modeloDetalle.getListaDetalle());
 
                 break;
+                          
+            }
+             
+              case "Atras": {
+          
+                System.out.println("atras");
                 
+                vistaAgregaUsuario.setVisible(false);
+                break;
+
             }
 
 

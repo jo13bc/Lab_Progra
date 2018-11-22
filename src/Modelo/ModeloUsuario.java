@@ -5,10 +5,7 @@
  */
 package Modelo;
 
-/**
- *
- * @author Fernando
- */
+
 public class ModeloUsuario {
     
 }

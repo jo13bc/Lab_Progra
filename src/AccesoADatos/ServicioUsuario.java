@@ -16,18 +16,20 @@ import java.util.Collection;
 
 public class ServicioUsuario extends Servicio {
 
-    private static final String INSERTARVUELO = "{call insertarUsuario(?,?,?,?,?,?,?,?,?)}";
-    private static final String MODIFICARVUELO = "{call modificarUsuario(?,?,?,?,?,?,?,?,?)}";
-    private static final String ELIMINARVUELO = "{call eliminarUsuario(?)}";
-    private static final String LISTARVUELO = "{?=call listarUsuario()}";
-    private static final String BUSCARVUELO = "{?=call buscarUsuario(?)}";
-    private static final String BUSCARVUELOTIPO = "{?=call buscarUsuarioprecio(?)}";
+    private static final String INSERTARUSUARIO = "{call insertarUsuario(?,?,?,?,?,?,?,?,?)}";
+    private static final String MODIFICARUSUARIO = "{call modificarUsuario(?,?,?,?,?,?,?,?,?)}";
+    private static final String ELIMINARUSUARIO = "{call eliminarUsuario(?)}";
+    private static final String LISTARUSUARIO = "{?=call listarUsuario()}";
+    private static final String BUSCARUSUARIO = "{?=call buscarUsuario(?)}";
+    
     private static ServicioUsuario servicioUsuario = new ServicioUsuario();
 
     public ServicioUsuario() {
     }
-
-    public void insertarUsuario(Usuario elUsuario) throws GlobalException, NoDataException {
+    
+    
+    
+     public void insertarUsuario(Usuario elUsuario) throws GlobalException, NoDataException {
         try {
             conectar();
         } catch (ClassNotFoundException e) {
@@ -38,17 +40,17 @@ public class ServicioUsuario extends Servicio {
         CallableStatement pstmt = null;
 
         try {
-            pstmt = conexion.prepareCall(INSERTARVUELO);
-            pstmt.setString(1, elUsuario.getUsuario());
+            pstmt = conexion.prepareCall(INSERTARUSUARIO);
+           
+             pstmt.setString(1, elUsuario.getUsuario());
             pstmt.setString(2, elUsuario.getContrasena());
             pstmt.setString(3, elUsuario.getNombre());
             pstmt.setString(4, elUsuario.getApellidos());
-            pstmt.setString(5, elUsuario.getEmail());
+            pstmt.setString(5, elUsuario.getCorreoElectronico());
             pstmt.setString(6, elUsuario.getFecha());
             pstmt.setString(7, elUsuario.getDireccion());
             pstmt.setInt(8, (int) elUsuario.getTelefonoTrabajo());
             pstmt.setInt(9, (int) elUsuario.getCelular());
-
             boolean resultado = pstmt.execute();
             if (resultado == true) {
                 throw new NoDataException("No se realizo la insercion");
@@ -67,6 +69,55 @@ public class ServicioUsuario extends Servicio {
             }
         }
     }
+    
+    
+    
+    
+    
+    
+    
+    
+
+//    public void insertarUsuario(Usuario elUsuario) throws GlobalException, NoDataException {
+//        try {
+//            conectar();
+//        } catch (ClassNotFoundException e) {
+//            throw new GlobalException("No se ha localizado el driver");
+//        } catch (SQLException e) {
+//            throw new NoDataException("La base de datos no se encuentra disponible");
+//        }
+//        CallableStatement pstmt = null;
+//
+//        try {
+//            pstmt = conexion.prepareCall(INSERTARUSUARIO);
+//            pstmt.setString(1, elUsuario.getUsuario());
+//            pstmt.setString(2, elUsuario.getContrasena());
+//            pstmt.setString(3, elUsuario.getNombre());
+//            pstmt.setString(4, elUsuario.getApellidos());
+//            pstmt.setString(5, elUsuario.getCorreoElectronico());
+//            pstmt.setString(6, elUsuario.getFecha());
+//            pstmt.setString(7, elUsuario.getDireccion());
+//            pstmt.setInt(8, (int) elUsuario.getTelefonoTrabajo());
+//            pstmt.setInt(9, (int) elUsuario.getCelular());
+//
+//            boolean resultado = pstmt.execute();
+//            if (resultado == true) {
+//                throw new NoDataException("No se realizo la insercion");
+//            }
+//
+//        } catch (SQLException e) {
+//            throw new GlobalException(e.getMessage());
+//        } finally {
+//            try {
+//                if (pstmt != null) {
+//                    pstmt.close();
+//                }
+//                desconectar();
+//            } catch (SQLException e) {
+//                throw new GlobalException("Estatutos invalidos o nulos");
+//            }
+//        }
+//    }
 
     public void modificarUsuario(Usuario elUsuario) throws GlobalException, NoDataException {
         try {
@@ -79,12 +130,12 @@ public class ServicioUsuario extends Servicio {
         CallableStatement pstmt = null;
 
         try {
-            pstmt = conexion.prepareCall(MODIFICARVUELO);
+            pstmt = conexion.prepareCall(MODIFICARUSUARIO);
             pstmt.setString(1, elUsuario.getUsuario());
             pstmt.setString(2, elUsuario.getContrasena());
             pstmt.setString(3, elUsuario.getNombre());
             pstmt.setString(4, elUsuario.getApellidos());
-            pstmt.setString(5, elUsuario.getEmail());
+            pstmt.setString(5, elUsuario.getCorreoElectronico());
             pstmt.setString(6, elUsuario.getFecha());
             pstmt.setString(7, elUsuario.getDireccion());
             pstmt.setInt(8, (int) elUsuario.getTelefonoTrabajo());
@@ -108,7 +159,7 @@ public class ServicioUsuario extends Servicio {
         }
     }
 
-    public void eliminarUsuario(String codigo) throws GlobalException, NoDataException {
+    public void eliminarUsuario(String usuario) throws GlobalException, NoDataException {
         try {
             conectar();
         } catch (ClassNotFoundException e) {
@@ -119,8 +170,8 @@ public class ServicioUsuario extends Servicio {
         CallableStatement pstmt = null;
 
         try {
-            pstmt = conexion.prepareCall(ELIMINARVUELO);
-            pstmt.setString(1, codigo);
+            pstmt = conexion.prepareCall(ELIMINARUSUARIO);
+            pstmt.setString(1, usuario);
             boolean resultado = pstmt.execute();
             if (resultado == true) {
                 throw new NoDataException("No se realizo la eliminación");
@@ -153,7 +204,7 @@ public class ServicioUsuario extends Servicio {
         Usuario usuario = null;
         CallableStatement pstmt = null;
         try {
-            pstmt = conexion.prepareCall(LISTARVUELO);
+            pstmt = conexion.prepareCall(LISTARUSUARIO);
             pstmt.registerOutParameter(1, oracle.jdbc.OracleTypes.CURSOR);
             pstmt.execute();
             rs = (ResultSet) pstmt.getObject(1);
@@ -164,7 +215,7 @@ public class ServicioUsuario extends Servicio {
                         rs.getString("Contrasena"),
                         rs.getString("Nombre"),
                         rs.getString("Apellidos"),
-                        rs.getString("Mail"),
+                        rs.getString("CorreoElectronico"),
                         rs.getString("Fecha"),
                         rs.getString("Direccion"),
                         rs.getInt("Telefono"),
@@ -203,7 +254,7 @@ public class ServicioUsuario extends Servicio {
         Usuario elUsuario = null;
         CallableStatement pstmt = null;
         try {
-            pstmt = conexion.prepareCall(BUSCARVUELO);
+            pstmt = conexion.prepareCall(BUSCARUSUARIO);
             pstmt.registerOutParameter(1, oracle.jdbc.OracleTypes.CURSOR);
             pstmt.setString(2, nombre);
             pstmt.execute();
@@ -213,7 +264,7 @@ public class ServicioUsuario extends Servicio {
                         rs.getString("Contrasena"),
                         rs.getString("Nombre"),
                         rs.getString("Apellidos"),
-                        rs.getString("Mail"),
+                        rs.getString("CoreoElectronico"),
                         rs.getString("Fecha"),
                         rs.getString("Direccion"),
                         rs.getInt("Telefono"),

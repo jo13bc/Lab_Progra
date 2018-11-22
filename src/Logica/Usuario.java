@@ -10,7 +10,7 @@ public class Usuario {
     public String contrasena;
     public String nombre;
     public String apellidos;
-    public String email;
+    public String correoElectronico;
     public String fecha;
     public String direccion;
     public int telefonoTrabajo;
@@ -18,12 +18,12 @@ public class Usuario {
     
     
     public Usuario(String usuario, String contrasena, String nombre, String apellidos,
-            String email, String fecha, String direccion, int telefonoTrabajo, int celular) {
+            String correoElectronico, String fecha, String direccion, int telefonoTrabajo, int celular) {
         this.usuario  = usuario;
         this.contrasena = contrasena;
         this.nombre = nombre;
         this.apellidos = apellidos;
-        this.email = email;
+        this.correoElectronico = correoElectronico;
         this.fecha  = fecha;
         this.direccion = direccion;
         this.telefonoTrabajo = telefonoTrabajo;
@@ -71,13 +71,13 @@ public class Usuario {
     }
 
  
-    public String getEmail() {
-        return email;
+    public String getCorreoElectronico() {
+        return correoElectronico;
     }
 
  
-    public void setEmail(String email) {
-        this.email = email;
+    public void setCorreoElectronico(String correoElectronico) {
+        this.correoElectronico = correoElectronico;
     }
 
    
@@ -118,6 +118,11 @@ public class Usuario {
 
     public void setCelular(int celular) {
         this.celular = celular;
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" + "usuario=" + usuario + ", contrasena=" + contrasena + ", nombre=" + nombre + ", apellidos=" + apellidos + ", correoElectronico=" + correoElectronico + ", fecha=" + fecha + ", direccion=" + direccion + ", telefonoTrabajo=" + telefonoTrabajo + ", celular=" + celular + '}';
     }
 
     
